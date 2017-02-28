@@ -1,0 +1,120 @@
+<ion-view hide-back-button="true" hide-nav-bar="true">
+  <ion-content id='startPage' scroll="true">
+
+    <div class='reveal-animation' ng-if='curPage === "login" || curPage === "signup"'>
+      <i class="icon ion-ios-arrow-back back-button" ng-click='showStartPage()'></i>
+    </div>
+
+    <img class='logo' ng-src='img/Logo with text.png'>
+
+    <!-- start stuff -->
+    <div class='reveal-animation' ng-if='curPage === "start"'>
+      <a class="button button-block startButton" ng-click="showSignupPage()">Sign up with email</a>
+      <a class="facebook-sign-in button button-block startButton " ng-click="facebookSignIn()">Login with Facebook</a>
+      <p class="text-center" >
+        Already have an account?
+        <a ng-click="showLoginPage()" ><span style='color:white; font-weight:bold;'>Log in</span></a >
+      </p >
+    </div>
+
+    <!-- login stuff -->
+    <div class='reveal-animation' ng-if='curPage === "login"'>
+    <form id='loginForm' ng-submit="login(loginForm)"
+      novalidate="novalidate"
+      name="loginForm">
+        <ion-list class='list list-inset'>
+        <label class="item item-input"
+            ng-class="{'has-error':loginForm.email.$invalid}">
+          <input type="email"
+                 placeholder="Email"
+                 ng-model="formData.email"
+                 name="email"
+                 ng-required = "true" >
+        </label >
+
+        <div class ="form-errors" ng-messages="loginForm.email.$error">
+           <div ng-messages-include ="templates/form-errors.html"></div>
+        </div>
+
+        <label class="item item-input"
+            ng-class="{'has-error':loginForm.password.$invalid}" >
+          <input type="password"
+                 placeholder="Password"
+                 ng-model="formData.password"
+                 name ="password"
+                 ng-required ="true"
+                 ng-minlength = "6" >
+        </label >
+
+        <div class ="form-errors" ng-messages="loginForm.password.$error">
+           <div ng-messages-include ="templates/form-errors.html"></div>
+        </div>
+      </ion-list>
+
+      <button class="button button-block startButton"
+              type="submit" >Login
+      </button >
+    </form >
+    </div>
+
+    <!-- start stuff -->
+    <div class='reveal-animation' ng-if='curPage === "signup"'>
+    <form id='signupForm' name="signupForm"
+          novalidate="novalidate"
+          ng-submit="signup(signupForm)" >
+      <ion-list class='list list-inset'>
+
+        <label class="item item-input"
+               ng-class="{'has-error':signupForm.name.$invalid}" >
+          <input type="text"
+                 placeholder="Name"
+                 name="name"
+                 ng-model="formData.name"
+                 ng-required="true" >
+        </label >
+        <div class="form-errors"
+             ng-messages="signupForm.name.$error">
+             <div ng-messages-include="templates/form-errors.html" ></div>
+        </div >
+
+        <label class="item item-input"
+               ng-class="{'has-error':signupForm.email.$invalid}" >
+          <input type="email"
+                 placeholder="Email"
+                 name="email"
+                 ng-model="formData.email"
+                 ng-required="true" >
+        </label >
+        <div class="form-errors"
+             ng-messages="signupForm.email.$error">
+             <div ng-messages-include="templates/form-errors.html" ></div>
+        </div >
+
+
+        <label class="item item-input"
+               ng-class="{'has-error':signupForm.password.$invalid}" >
+          <input type="password"
+                 placeholder="Password"
+                 name="password"
+                 ng-model="formData.password"
+                 ng-required="true"
+                 ng-minlength="6" >
+        </label >
+        <div class="form-errors"
+             ng-messages="signupForm.password.$error">
+             <div ng-messages-include="templates/form-errors.html" ></div>
+          <div class="form-error"
+               ng-message="minlength" >Password too short
+          </div >
+        </div >
+
+
+      </ion-list >
+      <button class="button button-block startButton"
+              type="submit" >Sign up
+      </button >
+    </form >
+    </div>
+
+    </ion-content >
+</ion-view >

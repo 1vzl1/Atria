@@ -1,0 +1,43 @@
+<ion-view view-title="Explore" hide-back-button="true">
+
+  <ion-nav-buttons side="right">
+    <div class="buttons">
+        <button class="button button-icon ion-android-search"
+                ng-click="showFilterBar()"></button>
+    </div>
+  </ion-nav-buttons>
+
+  <ion-content on-swipe-left="goForward()">
+    <ion-list can-swipe="true">
+      <ion-item ng-repeat="campaign in campaigns.results"
+                class="item-thumbnail-left"
+                ng-click="viewCampaign(campaign)">
+        <img ng-src="{{campaign.attributes.image.url()}}" >
+        <h2 >{{campaign.attributes.name}}</h2 >
+
+<!--         <p >
+          <span >
+            <i class="ion ion-ios-navigate" ></i >
+            {{cafe.distance | number:"0"}}m</span >
+        </p >
+        <p >
+          <i class="ion ion-ios-location" ></i >
+          {{cafe.location.display_address | join:", "}}
+        </p >
+        <p >
+          <span >
+            <i class="ion ion-star" ></i >
+            {{cafe.rating}}</span >
+          <span >
+            <i class="ion ion-person" ></i >
+            {{cafe.review_count}}</span >
+        </p >
+ -->
+<!--         <ion-option-button class="button-positive" ng-click='getDirections( cafe )'>
+          <i class='ion ion-map'></i>&nbsp;Directions
+        </ion-option-button> -->
+      </ion-item >
+    </ion-list >
+  </ion-content >
+
+</ion-view >

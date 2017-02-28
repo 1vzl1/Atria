@@ -1,0 +1,286 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+
+$light:                           #fff !default;
+$stable:                          #DEE1B6 !default;
+$positive:                        #73C8A9 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #BD5532;
+$royal:                           #73C8A9 !default;
+$dark:                            #373B44 !default;
+*/
+
+$positive:                        #73C8A9;
+$stable:                          #DEE1B6;
+$assertive:                       #9F2C2B;
+$assertive-subtitle:              #ecb8b8;
+$royal:                           #FFA500;
+$dark:                            #373B44;
+$facebook:                        #3B5998;
+
+
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(http://fonts.googleapis.com/css?family=Domine:400,700);
+
+/*
+$font-family-base: 'Domine', serif;
+*/
+
+$font-family-base: 'Raleway', sans-serif;
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+@import "www/scss/form.scss";
+@import "www/scss/styles.scss";
+
+.bar-header .title img {
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 5px;
+  margin-top: -5px;
+}
+
+body {
+  cursor: url('http://ionicframework.com/img/finger.png'), auto;
+}
+.slider {
+  height: 100%;
+}
+.slider-slide {
+  padding-top: 80px;
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+
+#logo {
+  margin: 30px 0px;
+}
+
+#list {
+  width: 170px;
+  margin: 30px auto;
+  font-size: 20px;
+}
+#list ol {
+  margin-top: 30px;
+}
+#list ol li {
+  text-align: left;
+  list-style: decimal;
+  margin: 10px 0px;
+}
+
+.button.ng-hide{
+  display:none;
+}
+
+.col-50{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.item-avatar, .item.tabs {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+.item-body {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.charity-card {
+  margin-bottom: 0px !important;
+}
+
+
+ion-slide{
+  padding: 10px;
+}
+
+#profile-header{
+  background-color: #000000;
+  border: 0px;
+  background-color: $dark;
+}
+
+#profile-header h2 {
+  color: #FFFFFF;
+}
+#profile-header h3 {
+  color: #b3b3b3;
+}
+
+#profile-picture{
+  text-align: center;
+  margin-bottom: 15px;
+
+  max-width: 150px;
+  max-height: 150px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border-radius: 75px;
+  -webkit-border-radius: 75px;
+  -moz-border-radius: 75px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+}
+
+.item-divider{
+  background-color: $assertive;
+  color: $light;
+}
+
+.campaign h1{
+  line-height: 2em;
+}
+
+.bar-header .title img {
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 5px;
+  margin-top: -5px;
+}
+.countdown {
+  height: 50px;
+  width: 230px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#CountDownPanel {
+  width: 193px;
+  float: left;
+  font-size: 4.5rem;
+}
+#millis {
+  float: left;
+  font-size: 1.5rem;
+}
+.circular-progress {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+#startPage {
+  background-color: $assertive;
+  padding: 10%;
+  color: $assertive-subtitle;
+}
+
+#startPage .back-button {
+  color: white;
+  font-size: 50px;
+
+  position: fixed;
+  top: -15px;
+  left: -10px;
+}
+
+.logo {
+  max-width:100%;
+
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+
+  padding: 0 20px 0 20px;
+}
+
+#startPage .startButton{
+  margin: 40px 0 25px 0;
+  border-color: white;
+  background-color: white;
+  color: $assertive;
+}
+
+.startButton:hover {
+  font-weight: bold;
+}
+
+.reveal-animation.ng-enter, .reveal-animation.ng-leave {
+  -webkit-transition:0.4s linear all;
+  transition:0.4s linear all;
+}
+
+.reveal-animation.ng-enter {
+  opacity: 0;
+}
+
+.reveal-animation.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+.reveal-animation.ng-leave {
+  opacity: 1;
+}
+
+.reveal-animation.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+#startPage .item{
+  margin-top: 20px;
+  border-color: white;
+  color: white;
+  background-color: $assertive;
+  border-radius: 2px;
+}
+
+#startPage input{
+  color: white;
+}
+
+input::-webkit-input-placeholder {
+   color: $assertive-subtitle;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+   color: $assertive-subtitle;
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+   color: $assertive-subtitle;
+}
+
+input:-ms-input-placeholder {
+   color: $assertive-subtitle;
+}
+

@@ -1,0 +1,46 @@
+<ion-view view-title="Intro" hide-back-button="true">
+
+  <ion-nav-buttons side="right"> 
+    <button class="button button-positive button-clear no-animation"
+            ng-click="startApp()" ng-show="slideIndex!= 2">
+      Skip
+    </button>
+    <button class="button button-royal button-clear no-animation"
+            ng-click="startApp()" ng-show="slideIndex == 2">
+      Start
+    </button>
+  </ion-nav-buttons>
+
+  <ion-slide-box on-slide-changed="slideChanged(index)">
+    <ion-slide>
+      <h3>Thank you for choosing the Atria App!</h3>
+      <div id="logo">
+        <img src="data:image/png;base64,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">
+      </div>
+      <p>
+        We've worked super hard to make you happy.
+      </p>
+      <p>
+        But if you are angry, too bad.
+      </p>
+    </ion-slide>
+    <ion-slide>
+      <h3>Using Atria</h3>
+      
+      <div id="list">
+        <h5>Just three steps:</h5>
+        <ol>
+          <li>Enter your employer ID</li>
+          <li>Set your commitments</li>
+          <li>Start tracking your workouts through the Atria app</li>
+        </ol>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <h3>Any questions?</h3>
+      <p>
+        E-mail info@atriafitness.com!
+      </p>
+    </ion-slide>
+  </ion-slide-box>
+</ion-view>

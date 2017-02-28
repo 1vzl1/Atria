@@ -1,0 +1,94 @@
+<ion-view view-title="Profile" hide-back-button="true">
+
+	<ion-nav-buttons side="right" >
+		<button class="button button-clear"
+		        ng-click="edit()" >
+		        <i class="icon ion-gear-a"></i>
+		</button >
+	</ion-nav-buttons >
+
+	<ion-content
+
+	             on-swipe-right="goBack()" >
+
+                             <!-- scroll="false" -->
+<!--
+		<button class="button button-dark button-block button-clear"
+		        ng-click="tutorial()">View Tutorial
+		</button >
+ -->
+
+  <ion-list>
+    <ion-item id='profile-header'>
+    <div class='row'>
+      <div class='col' style="text-align: center">
+        <img id='profile-picture' src="img/Default profile picture.png">
+        <h2>{{formData.name}}</h2>
+        <h3>{{formData.email}}</h3>
+      </div>
+    </div>
+    </ion-item>
+
+  <ion-item class='item-divider'>Personal stats</ion-item>
+
+    <ion-item class="item-icon-left">
+      <i class="icon ion-trophy"></i>
+        Atria points
+      <span class="item-note">
+        10,000
+      </span>
+    </ion-item>
+
+    <ion-item class="item-icon-left">
+      <i class="icon ion-clock"></i>
+        Exercise hours
+      <span class="item-note">
+        36.25
+      </span>
+    </ion-item>
+  </ion-list>
+
+      <div class="item item-divider">
+        Current Campaign
+      </div>
+
+      <a class="item item-thumbnail-left item-icon-right campaign" href="#" >
+          <img src="data:image/png;base64,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">
+          <div style="vertical-align: middle; height: 100%">
+            <h1>Heart &amp; Stroke</h1>
+          </div>
+
+            <i class="icon ion-plus-circled assertive"></i>
+      </a>
+
+<!--     <a class="item item-icon-left assertive" href="#" >
+      <i class="icon ion-plus-circled"></i>
+      View my stats
+    </a> -->
+
+    <div class="item item-divider">
+        Past campaigns
+      </div>
+
+      <a class="item item-thumbnail-left item-icon-right campaign" href="#" >
+          <img src="img/WWF.png"/>
+          <div style="vertical-align: middle; height: 100%">
+            <h1>World Wildlife Foundation</h1>
+            <i class="icon ion-plus-circled assertive"></i>
+          </div>
+      </a>
+
+      <a class="item item-thumbnail-left item-icon-right campaign" href="#" >
+        <img src="http://wp.production.patheos.com/blogs/deaconsbench/files/2015/02/habitat-for-humanity-logo.jpg"/>
+          <div style="vertical-align: middle; height: 100%">
+            <h1>Habitat for Humanity</h1>
+            <i class="icon ion-plus-circled assertive"></i>
+          </div>
+      </a>
+
+		<button class="button button-block button-dark"
+		        ng-click="logout()">Logout
+		</button >
+
+	</ion-content >
+</ion-view >

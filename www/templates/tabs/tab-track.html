@@ -1,0 +1,14 @@
+<ion-view view-title="Track Workout">
+
+	<ion-content scroll="false"
+				 on-swipe-right="goBack()" on-swipe-left="goForward()">
+		<div class="countdown" ng-init="setTimer()">
+			<div id="CountDownPanel"></div>
+			<div id="millis"></div>
+		</div>
+		<div class="circular-progress"  ng-click="startTimer()">
+			<div round-progress max="max" current="current" color="#9f2c2b" bgcolor="#eaeaea" radius="150" stroke="20" semi="false" rounded="true" clockwise="true" responsive="false" duration="800" animation="easeInOutCubic"></div>
+		</div>
+	</ion-content >
+	
+</ion-view >
